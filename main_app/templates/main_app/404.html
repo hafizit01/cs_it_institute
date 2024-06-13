@@ -1,0 +1,47 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block titel %}Page Not Found{% endblock %}
+{% block body %}
+<div class="page-title-area">
+    <div class="container">
+    <div class="page-shape-wrap">
+    <div class="page-title-content">
+    <h2>404!</h2>
+    <ul>
+    <li>
+    <a href="index.html">
+    Home
+    </a>
+    </li>
+    <li class="active">
+    404!
+    </li>
+    </ul>
+    </div>
+    <img src="{% static 'assets/images/page-bg-shape-1.png' %}" alt="Image" class="shape shape-1" data-speed="0.04" data-revert="true">
+    <img src="{% static 'assets/images/page-bg-shape-7.png' %}" alt="Image" class="shape shape-2" data-speed="0.04" data-revert="true">
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="error-area ptb-100">
+    <div class="d-table">
+    <div class="d-table-cell">
+    <div class="error-content">
+    <h1>4 <span class="red">0</span> 4</h1>
+    <h3>Oops! Page Not Found</h3>
+    <p>The page you were looking for could not be found.</p>
+    <a href="index.html" class="default-btn two">
+    <span>
+    Return To Home Page
+    <i class="flaticon-next"></i>
+    </span>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
+{% endblock body %}
+
+

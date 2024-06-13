@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+{% load static %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/remixicon.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/aos.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/odometer.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/before-after.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/dark.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<link rel="icon" type="image/png" href="{% static 'assets/images/CS IT Logo.png' %}">
+
+{% block head %}
+  
+{% endblock head %}
+  
+<title>{% block titel %}CS IT Institute{% endblock titel %}</title>
+</head>
+<body>
+
+<!-- <div class="preloader">
+<div class="content">
+<div class="box"></div>
+</div>
+</div> -->
+
+<style>
+    @media only screen and (max-width: 994px) {
+  .white-logo {
+    display: none;
+  }
+}
+
+
+
+</style>
+
+<div class="navbar-area">
+<div class="mobile-responsive-nav">
+<div class="container">
+<div class="mobile-responsive-menu">
+<div class="logo">
+<a href="{% url 'index' %}">
+<img src="{% static 'assets/images/CS IT Logo.png' %}" class="main-logo" alt="logo">
+<img src="{% static 'assets/images/CS IT Logo white.jpg' %}" class="white-logo" alt="logo">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="desktop-nav">
+<div class="container-fluid">
+<nav class="navbar navbar-expand-md navbar-light">
+<a class="navbar-brand" href="{% url 'index' %}">
+<img src="{% static 'assets/images/CS IT Logo.png' %}" class="main-logo" alt="logo">
+<img src="{% static 'assets/images/CS IT Logo white.jpg' %}" class="white-logo" alt="logo">
+</a>
+<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+<ul class="navbar-nav m-auto">
+<li class="nav-item">
+<a href="#" class="nav-link dropdown-toggle active">
+Home
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="{% url 'index' %}" class="nav-link active">Home Demo - One</a>
+</li>
+<li class="nav-item">
+<a href="index-2.html" class="nav-link">Home Demo - Two</a>
+</li>
+<li class="nav-item">
+<a href="index-3.html" class="nav-link">Home Demo - Three</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link dropdown-toggle">
+Pages
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="about-us.html" class="nav-link">About Us</a>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link dropdown-toggle">
+Instructors
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="our-instructors.html" class="nav-link">Our Instructors</a>
+</li>
+<li class="nav-item">
+<a href="instructors-details.html" class="nav-link">Instructors Details</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link dropdown-toggle">
+Event
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="event.html" class="nav-link">Event</a>
+</li>
+<li class="nav-item">
+<a href="event-details.html" class="nav-link">Event Details</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link dropdown-toggle">
+User
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="log-in.html" class="nav-link">Log In</a>
+</li>
+<li class="nav-item">
+<a href="register.html" class="nav-link">Register</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link dropdown-toggle">
+Others
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="faq.html" class="nav-link">FAQ</a>
+</li>
+<li class="nav-item">
+<a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+</li>
+<li class="nav-item">
+<a href="terms-conditions.html" class="nav-link">Terms And Conditions</a>
+</li>
+<li class="nav-item">
+<a href="coming-soon.html" class="nav-link">Coming Soon</a>
+</li>
+<li class="nav-item">
+<a href="404.html" class="nav-link">404 Page</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="testimonials.html" class="nav-link">Testimonials</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link dropdown-toggle">
+Our Courses
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="{% url 'all_course' %}" class="nav-link">Our Courses</a>
+</li>
+<li class="nav-item">
+<a href="{% url 'free_application_form' %}" class="nav-link">Application</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link dropdown-toggle">
+Shop
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="product.html" class="nav-link">Product</a>
+</li>
+<li class="nav-item">
+<a href="cart.html" class="nav-link">Cart</a>
+</li>
+<li class="nav-item">
+<a href="checkout.html" class="nav-link">Checkout</a>
+</li>
+<li class="nav-item">
+<a href="product-details.html" class="nav-link">Product Details</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link dropdown-toggle">
+Blog
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="blog.html" class="nav-link">Blog</a>
+</li>
+<li class="nav-item">
+<a href="blog-details.html" class="nav-link">Blog Details</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="contact-us.html" class="nav-link">Contact Us</a>
+</li>
+</ul>
+<div class="others-options">
+<ul class="d-flex justify-content-between align-items-center">
+<li>
+<a href="register.html" class="sign-in">
+<i class="ri-login-box-line"></i>
+Sign In
+</a>
+</li>
+<li>
+<a href="our-courses.html" class="default-btn">
+Get Started
+<i class="ri-edit-line"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<div class="others-option-for-responsive">
+<div class="container">
+<div class="dot-menu">
+<div class="inner">
+<div class="circle circle-one"></div>
+<div class="circle circle-two"></div>
+<div class="circle circle-three"></div>
+</div>
+</div>
+<div class="container">
+<div class="option-inner">
+<div class="others-options justify-content-center d-flex align-items-center">
+<ul>
+<li>
+<a href="register.html" class="sign-in">
+<i class="ri-login-box-line"></i>
+Sign In
+</a>
+</li>
+<li>
+<a href="our-courses.html" class="default-btn">
+Get Started
+<i class="ri-edit-line"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% block body %}
+    
+{% endblock body %}
+    
+
+<div class="footer-area">
+    <div class="pt-100 pb-70">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-3 col-sm-6">
+    <div class="single-footer-widget">
+    <a href="{% url 'index' %}">
+    <img src="{% static 'assets/images/CS IT Logof.png' %}" alt="Image" width="100px">
+    </a>
+    <p>CS IT Institute imparts high quality technology education, guiding students on the path to excellence through innovation and expertise. It creates a motivating learning environment through modern education and technology.</p>
+    <ul class="social-link">
+    <li>
+    <a href="https://www.facebook.com/" target="_blank">
+    <i class="ri-facebook-fill"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://www.twitter.com/" target="_blank">
+    <i class="ri-twitter-fill"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://www.instagram.com/" target="_blank">
+    <i class="ri-instagram-line"></i>
+    </a>
+    </li>
+    <li>
+    <a href="https://www.google.com/" target="_blank">
+    <i class="ri-google-fill"></i>
+    </a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+    <div class="single-footer-widget">
+    <h3>Support</h3>
+    <ul class="use-link">
+    <li>
+    <a href="our-instructors.html">
+    <i class="ri-arrow-right-line"></i>
+    Our Instructors
+    </a>
+    </li>
+    <li>
+    <a href="contact-us.html">
+    <i class="ri-arrow-right-line"></i>
+    Contact Us
+    </a>
+    </li>
+    <li>
+    <a href="privacy-policy.html">
+    <i class="ri-arrow-right-line"></i>
+    Privacy Policy
+    </a>
+    </li>
+    <li>
+    <a href="terms-conditions.html">
+    <i class="ri-arrow-right-line"></i>
+    Terms Conditions
+    </a>
+    </li>
+    <li>
+    <a href="our-courses.html">
+    <i class="ri-arrow-right-line"></i>
+    Our Courses
+    </a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+    <div class="single-footer-widget">
+    <h3>Useful Link</h3>
+    <ul class="use-link">
+    <li>
+    <a href="about-us.html">
+    <i class="ri-arrow-right-line"></i>
+    About Us
+    </a>
+    </li>
+    <li>
+    <a href="blog.html">
+    <i class="ri-arrow-right-line"></i>
+    Blog
+    </a>
+    </li>
+    <li>
+    <a href="blog-details.html">
+    <i class="ri-arrow-right-line"></i>
+    Blog Details
+    </a>
+    </li>
+    <li>
+    <a href="our-courses.html">
+    <i class="ri-arrow-right-line"></i>
+    Our Courses
+    </a>
+    </li>
+    <li>
+    <a href="terms-conditions.html">
+    <i class="ri-arrow-right-line"></i>
+    Terms Conditions
+    </a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+    <div class="single-footer-widget">
+    <h3>Information</h3>
+    <ul class="information-link">
+    <li>
+    <i class="ri-headphone-line"></i>
+    <span>Call Us</span>
+    <a href="tel:+800-388-80-90">+800 388 80 90</a>
+    </li>
+    <li>
+    <i class="ri-mail-line"></i>
+    <span>Email Us</span>
+    <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#90f8f5fcfcffd0fae5f6f1bef3fffd"><span class="__cf_email__" data-cfemail="79111c15151639130c1f18571a1614">[email&#160;protected]</span></a>
+    </li>
+    <li>
+    <i class="ri-map-pin-line"></i>
+    <span>Location</span>
+    6 DIT Avenue, Sabbir Court(6th floor), Dainik Banglar mor, Motijheel, Dhaka-1000
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="copy-right-area">
+    <div class="container">
+    <div class="copy-right-content">
+    <p>@CS IT. Design & Developed By <a href="https://easycodingbd.com/" target="_blank">Easy Coding</a></p>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    
+    
+    <div class="go-top">
+    <i class="ri-arrow-up-s-fill"></i>
+    <i class="ri-arrow-up-s-fill"></i>
+    </div>
+    
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/meanmenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/carousel-thumbs.min.js' %}"></script>
+    <script src="{% static 'assets/js/aos.min.js' %}"></script>
+    <script src="{% static 'assets/js/appear.min.js' %}"></script>
+    <script src="{% static 'assets/js/odometer.min.js' %}"></script>
+    <script src="{% static 'assets/js/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/before-after.min.js' %}"></script>
+    <script src="{% static 'assets/js/tween-max.min.js' %}"></script>
+    <script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'assets/js/contact-form-script.js' %}"></script>
+    <script src="{% static 'assets/js/ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    
+    
+    {% block script %}
+      
+    {% endblock script %}
+      
+    </body>
+    
+    </html>

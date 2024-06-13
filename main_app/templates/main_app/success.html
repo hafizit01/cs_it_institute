@@ -1,0 +1,40 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block title %} Form Submission Successful {% endblock title %}
+{% block body %}
+
+
+<style>
+    .card {
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .card-body {
+        text-align: center;
+    }
+    .success-icon {
+        font-size: 4rem;
+        color: #28a745;
+        animation: bounce 1s infinite;
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+</style>
+
+<div class="container mt-5">
+<div class="card">
+    <div class="card-body">
+        <i class="success-icon ri-check-line"></i>
+
+        <h2 class="card-title text-success">Form Submission Successful!!!</h2>
+        <p class="card-text">Your application for the free course has been successfully submitted. We'll get back to you soon.</p>
+        <hr>
+        <p class="card-text mb-0">Thank you for your interest!</p>
+    </div>
+</div>
+</div>
+
+
+{% endblock body %}

@@ -1,0 +1,154 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block titel %}{% endblock titel %}
+{% block body %}
+
+
+
+<div class="page-title-area">
+<div class="container">
+<div class="page-shape-wrap">
+<div class="page-title-content">
+<h2>Our Courses</h2>
+<ul>
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+<li class="active">
+Our Courses
+</li>
+</ul>
+</div>
+<img src="assets/images/page-bg-shape-1.png" alt="Image" class="shape shape-1" data-speed="0.04" data-revert="true">
+<img src="assets/images/page-bg-shape-4.png" alt="Image" class="shape shape-2" data-speed="0.04" data-revert="true">
+</div>
+</div>
+</div>
+
+
+<div class="online-courses-area ptb-100">
+<div class="container">
+<div class="section-title">
+<span class="top-title">Online Courses</span>
+<h2>Explore Featured <span>Courses</span></h2>
+</div>
+<div class="courses-search-wrap">
+<div class="row align-items-center">
+<div class="col-lg-6 col-sm-6">
+<p>We found 63 courses available for you</p>
+</div>
+<div class="col-lg-6 col-sm-6">
+<form class="search-box">
+<div class="search-input">
+<input type="text" name="Search" placeholder="Search for..." class="form-control">
+<button type="submit" class="search-btn">
+<i class="ri-search-line"></i>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="row justify-content-center">
+    
+    {% for x in course %}
+    <div class="col-xl-4 col-md-6">
+        <div class="single-courses-item">
+            <div class="courses-img">
+            <a href="{% url 'course_detail' x.slug %}">
+            <img src="{{ x.image.url }}" alt="x.course_name">
+            </a>
+            <ul>
+            <li>
+            <a href="courses.html">Featured</a>
+            </li>
+            <li class="bg-5696fa">
+            <span>
+                {% if x.discount_percentage %}
+                    <span>{{ x.discount_percentage|floatformat:0 }}%</span>
+                {% else %}
+                    No discount available
+                {% endif %}</span>
+            
+            </li>
+            </ul>
+            <img src="{% static 'assets/images/courses/teacher-1.png' %}" alt="Image" class="teacher">
+            </div>
+            <div class="courses-content">
+            <ul class="courses-view">
+            <li>
+            <i class="ri-user-line"></i>
+            {{ x.enroll_count }}k
+            </li>
+            <li>
+            <i class="ri-eye-line"></i>
+            {{ x.user_view_count }} k
+            </li>
+            <li>
+            <i class="ri-star-fill"></i>
+            4.9
+            </li>
+            </ul>
+            <h3>
+            <a href="{% url 'course_detail' x.slug %}">
+            {{ x.course_name }}
+            </a>
+            </h3>
+            <ul class="courses-time d-flex justify-content-between">
+            <li>
+            <i class="ri-time-fill"></i>
+            {{ x.class_duration }}
+            </li>
+            <li>
+            <i class="ri-vidicon-fill"></i>
+            {{ x.total_lecture }} Lectures
+            </li>
+            <li>
+            <i class="ri-list-check"></i>
+            Beginer
+            </li>
+            </ul>
+            </div>
+            <ul class="courses-fee d-flex justify-content-between">
+            <li>
+            
+            {% if x.discount_price %}
+                ৳ {{ x.discount_price }}
+            {% else %}
+            ৳ {{ x.price }}
+            {% endif %}
+                
+            </li>
+            <li>
+            <a href="{% url 'course_detail' x.slug %}" class="read-more">
+            More Details
+            <i class="ri-arrow-right-line"></i>
+            </a>
+            </li>
+            </ul>
+            </div>
+        </div>
+    {% endfor %}
+        
+
+
+<div class="col-12">
+<div class="pagination-area">
+<a href="#" class="next page-numbers">
+<i class="ri-arrow-left-line"></i>
+</a>
+<span class="page-numbers current" aria-current="page">1</span>
+<a href="#" class="page-numbers">2</a>
+<a href="#" class="page-numbers">3</a>
+<a href="#" class="next page-numbers">
+<i class="ri-arrow-right-line"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock body %}
