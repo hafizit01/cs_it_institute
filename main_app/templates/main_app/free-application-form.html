@@ -5,25 +5,26 @@
 
 <div class="container mt-5">
     <h2 class="text-center">Application form for free course</h2>
-    <form>
+    <form method="post" action="{% url 'free_application_form' %}" enctype="multipart/form-data">
+        {% csrf_token %}
         <div class="mb-3">
             <label for="fullName" class="form-label">Full Name*</label>
-            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+            <input type="text" name="name" class="form-control" id="fullName" placeholder="Enter your full name" required>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email address*</label>
-            <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+            <input type="email" name="email" class="form-control" id="email" placeholder="example@gmail.com" required>
         </div>
         <div class="mb-3">
             <label for="phone" class="form-label">Phone Number*</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            <input type="tel" name="phone" class="form-control" id="phone" placeholder="Enter your phone number" required>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Message(optional)</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your message"></textarea>
+            <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your message"></textarea>
         </div>
         <div class="text-center mb-30">
-            <button type="button" class="btn btn-outline-info">Submit Form</button>
+            <button type="submit" class="btn btn-outline-info">Submit Form</button>
         </div>
 
     </form>

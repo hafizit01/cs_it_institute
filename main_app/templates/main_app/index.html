@@ -616,9 +616,11 @@ Start Teaching Today
 <h2>Check Out Our Latest <span>Blog</span></h2>
 </div>
 <div class="blog-slide owl-carousel owl-theme">
+
+{% for b in blog %}
 <div class="single-blog-item">
-<a href="blog-details.html">
-<img src="{% static 'assets/images/blog/blog-1.jpg' %}" alt="Image">
+<a href="{% url 'blog_details' b.slug %}">
+<img src="{{b.image.url}}" alt="Image">
 </a>
 <div class="blog-content">
 <ul class="d-flex justify-content-between">
@@ -630,7 +632,7 @@ Start Teaching Today
 </li>
 <li>
 <i class="ri-time-fill"></i>
-<span>Sep 8,2021</span>
+<span>{{b.blog_date}}</span>
 </li>
 <li>
 <i class="ri-eye-fill"></i>
@@ -639,111 +641,17 @@ Start Teaching Today
 </ul>
 <h3>
 <a href="blog-details.html">
-Education for Foreign Students & Institution’s Teachers
+{{b.blog_name}}
 </a>
 </h3>
-<a href="blog-details.html" class="read-more">
+<a href="{% url 'blog_details' b.slug %}" class="read-more">
 More Details
 <i class="ri-arrow-right-line"></i>
 </a>
 </div>
 </div>
-<div class="single-blog-item">
-<a href="blog-details.html">
-<img src="{% static 'assets/images/blog/blog-2.jpg' %}" alt="Image">
-</a>
-<div class="blog-content">
-<ul class="d-flex justify-content-between">
-<li>
-<a href="blog.html">
-<i class="ri-user-line"></i>
-<span>Admin</span>
-</a>
-</li>
-<li>
-<i class="ri-time-fill"></i>
-<span>Sep 9,2021</span>
-</li>
-<li>
-<i class="ri-eye-fill"></i>
-<span>33.2k Views</span>
-</li>
-</ul>
-<h3>
-<a href="blog-details.html">
-Mastering on Data Modeling For Fundamentals Courses
-</a>
-</h3>
-<a href="blog-details.html" class="read-more">
-More Details
-<i class="ri-arrow-right-line"></i>
-</a>
-</div>
-</div>
-<div class="single-blog-item">
-<a href="blog-details.html">
-<img src="{% static 'assets/images/blog/blog-3.jpg' %}" alt="Image">
-</a>
-<div class="blog-content">
-<ul class="d-flex justify-content-between">
-<li>
-<a href="blog.html">
-<i class="ri-user-line"></i>
-<span>Admin</span>
-</a>
-</li>
-<li>
-<i class="ri-time-fill"></i>
-<span>Sep 10,2021</span>
-</li>
-<li>
-<i class="ri-eye-fill"></i>
-<span>34.2k Views</span>
-</li>
-</ul>
-<h3>
-<a href="blog-details.html">
-Application Deadline to Graduate at Fall Convocation
-</a>
-</h3>
-<a href="blog-details.html" class="read-more">
-More Details
-<i class="ri-arrow-right-line"></i>
-</a>
-</div>
-</div>
-<div class="single-blog-item">
-<a href="blog-details.html">
-<img src="{% static 'assets/images/blog/blog-4.jpg' %}" alt="Image">
-</a>
-<div class="blog-content">
-<ul class="d-flex justify-content-between">
-<li>
-<a href="blog.html">
-<i class="ri-user-line"></i>
-Admin
-</a>
-</li>
-<li>
-<i class="ri-time-fill"></i>
-<span>Sep 11,2021</span>
-</li>
-<li>
-<i class="ri-eye-fill"></i>
-<span>35.2k Views</span>
-</li>
-</ul>
-<h3>
-<a href="blog-details.html">
-An Annual Survey Produced by The International Education
-</a>
-</h3>
-<a href="blog-details.html" class="read-more">
-More Details
-<i class="ri-arrow-right-line"></i>
-</a>
-</div>
-</div>
+{% endfor %}
+
 </div>
 </div>
 </div>

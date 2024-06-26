@@ -71,6 +71,20 @@ class Teacher(models.Model):
     def __str__(self):
         return self.name
 
+
+class Contact(models.Model):
+    name=models.CharField(max_length=30)
+    email=models.EmailField(blank=True, null=True)
+    phone=models.CharField(max_length=13, blank=True, null=True)
+    subject=models.CharField(max_length=40)
+    message=models.CharField(max_length=50, blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural='Contacts'
+
+    def __str__(self):
+        return f'{self.name}  {self.subject}'
+
 class Testmonial(models.Model):
     image=models.ImageField(upload_to='TestmonialImage/')
     name=models.CharField(max_length=50)
@@ -79,6 +93,48 @@ class Testmonial(models.Model):
 
     class Meta:
         verbose_name_plural='Testmonials'
+
+    def __str__(self):
+        return self.name
+
+
+class Free_course_apply(models.Model):
+    name=models.CharField(max_length=50)
+    email=models.EmailField()
+    phone=models.CharField(max_length=14)
+    message=models.CharField(max_length=100, blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural='Free_course_applys'
+
+    def __str__(self):
+        return self.name
+
+
+class Blog(models.Model):
+    image=models.ImageField(upload_to='BlogImage/')
+    #user=models.ForeignKey(User, on_delete=models.CASCADE)
+    #user_view_count=models.CharField(max_length=10, blank=True, null=True)
+    blog_name=models.CharField(max_length=50)
+    blog_date=models.DateField(auto_now=True, blank=True, null=True)
+    description=RichTextField(blank=True, null=True)
+    slug=AutoSlugField(populate_from='blog_name', blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural='blogs'
+
+    def __str__(self):
+        return self.blog_name
+
+
+class Blog_reply(models.Model):
+    name=models.CharField(max_length=50)
+    email=models.EmailField()
+    website=models.URLField(max_length=100, blank=True, null=True)
+    message=models.CharField(max_length=100, blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural='Blog_replys'
 
     def __str__(self):
         return self.name
